@@ -112,15 +112,39 @@ log "Max restarts: ${MAX_RESTARTS:-unlimited}"
 log "Restart delay: ${RESTART_DELAY}s"
 log "Restart on error: $RESTART_ON_ERROR"
 
+# Signal handler: forward signal to child process and set shutdown flag
+child_pid=0
+shutting_down=false
+cleanup() {
+    local sig=$1
+    log "Received SIG${sig}, shutting down..."
+    shutting_down=true
+    if [ $child_pid -ne 0 ]; then
+        kill -${sig} $child_pid 2>/dev/null
+        wait $child_pid 2>/dev/null
+    fi
+}
+trap 'cleanup TERM' SIGTERM
+trap 'cleanup INT' SIGINT
+trap 'cleanup HUP' SIGHUP
+
 while true; do
     log "Starting claude-threads (restart #$restart_count)..."
 
     # Run claude-threads with any remaining arguments
     # Note: CLAUDE_THREADS_CMD may be "bun /path/to/file.js" so we use eval
     set +e
-    eval $CLAUDE_THREADS_CMD '"$@"'
+    eval $CLAUDE_THREADS_CMD '"$@"' &
+    child_pid=$!
+    wait $child_pid
     exit_code=$?
+    child_pid=0
     set -e
+
+    if [ "$shutting_down" = true ]; then
+        log "Signal received, exiting daemon"
+        exit 0
+    fi
 
     log "claude-threads exited with code $exit_code"
 
