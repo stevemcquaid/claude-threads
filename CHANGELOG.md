@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.7] - 2026-03-08
+
+### Security
+- **Bump hono to 4.12.5** - Fixes CVE-2026-29045 (arbitrary file access via serveStatic)
+- **Bump @hono/node-server to 1.19.11** - Fixes CVE-2026-29087 (authorization bypass via encoded slashes)
+- **Bump express-rate-limit to 8.3.0** - Fixes CVE-2026-30827 (IPv4-mapped IPv6 rate limiting bypass)
+- **Bump @modelcontextprotocol/sdk to 1.26.0** - Fixes CVE-2026-25536
+- **Bump hono to 4.12.3** - Fixes CVE-2026-27700
+
+### Dependencies
+- **Bump production dependencies** - hono 4.12.5, @hono/node-server 1.19.11, express-rate-limit 8.3.0, @modelcontextprotocol/sdk 1.26.0 (#281, #276, #271, #270)
+- **Bump dev dependencies** - ajv 6.14.0 (#264)
+- **Bump CI actions** - actions/upload-artifact v6→v7 (#273), aquasecurity/trivy-action 0.34.2 (#274, #265, #257)
+- **Add overrides/resolutions** for @hono/node-server and express-rate-limit to pin transitive deps
+- **Ignore transitive minimatch ReDoS advisories** in bun audit
+
 ## [1.4.6] - 2026-01-29
 
 ### Security
