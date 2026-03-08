@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.8] - 2026-03-08
+
+### Fixed
+- **WebSocket not defined on Node.js** - Added compatibility layer for `--target node` builds; bot now works on Node.js <22 and all Bun versions (#263, #283)
+- **Orphaned daemon processes** - Daemon wrapper now traps SIGTERM/SIGINT/SIGHUP, kills child process cleanly, and forwards the actual signal (#258, #282)
+- **Session store crash on malformed file** - `sessions.json` containing `{}` or missing fields no longer crashes; `loadRaw()` validates structure defensively (#258, #284)
+- **!stop ignored in paused sessions** - `!stop`/`!cancel` commands now work in paused sessions instead of being passed as prompts (#258, #285)
+
 ## [1.4.7] - 2026-03-08
 
 ### Security
