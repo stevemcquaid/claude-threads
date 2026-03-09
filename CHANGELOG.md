@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 2026-03-09
+
+### Fixed
+- **Crash when stdin is not a TTY** - Bot now falls back to headless mode when stdin is not a TTY (e.g., when run via daemon in a non-interactive shell) (#287)
+
 ## [1.5.0] - 2026-03-08
 
 ### Added
