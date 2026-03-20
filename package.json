@@ -116,11 +116,13 @@
   "overrides": {
     "hono": "$hono",
     "@hono/node-server": "$@hono/node-server",
-    "express-rate-limit": "$express-rate-limit"
+    "express-rate-limit": "$express-rate-limit",
+    "flatted": ">=3.4.0"
   },
   "resolutions": {
     "hono": "$hono",
     "@hono/node-server": "$@hono/node-server",
-    "express-rate-limit": "$express-rate-limit"
+    "express-rate-limit": "$express-rate-limit",
+    "flatted": ">=3.4.0"
   }
 }
