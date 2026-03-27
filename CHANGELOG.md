@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-03-27
+
+### Added
+- **Windows compatibility** - Process spawning now works on Windows via Git Bash or WSL (#295)
+
+### Fixed
+- **False headless detection via daemon** - Bot no longer incorrectly activates headless mode when spawned by the auto-restart daemon. The daemon runs the child as a background job which stripped TTY assignment; now the parent's TTY status is forwarded via environment variable (#299, #300)
+
+### Security
+- **Override picomatch to >=2.3.2** - Fixes GHSA-c2c7-rcm5-vvqj (ReDoS via extglob quantifiers) in transitive dependencies (#302)
+- **Override flatted to >=3.4.0** - Fixes GHSA-25h7-pfq9-p65f
+
+### Dependencies
+- **Bump production dependencies** - hono, @hono/node-server, picomatch, and others (#289, #292, #297, #298)
+- **Bump dev dependencies** - eslint 9→10, typescript 5.7→5.9, typescript-eslint 8.50→8.57 (#301)
+- **Bump CI actions** - aquasecurity/trivy-action 0.35.0 (#288)
+
 ## [1.5.1] - 2026-03-09
 
 ### Fixed
