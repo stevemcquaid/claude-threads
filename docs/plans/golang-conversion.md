@@ -64,13 +64,13 @@ Convert claude-threads from TypeScript/Bun to Go. The Go binary lives in `go/` a
 **Goal:** Full Mattermost WebSocket + REST implementation.
 
 ### Tasks
-- [ ] Translate `src/platform/mattermost/types.ts` → `internal/platform/mattermost/types.go`
-- [ ] Translate `src/platform/mattermost/formatter.ts` → `internal/platform/mattermost/formatter.go` (tests first)
-- [ ] Translate `src/mattermost/api.ts` → `internal/platform/mattermost/api.go` (tests first)
-- [ ] Translate `src/platform/mattermost/client.ts` → `internal/platform/mattermost/client.go` (tests first)
-- [ ] WebSocket reconnection logic
-- [ ] File upload/download
-- [ ] All Mattermost tests GREEN
+- [x] Translate `src/platform/mattermost/types.ts` → `internal/platform/mattermost/types.go`
+- [x] Translate `src/platform/mattermost/formatter.ts` → `internal/platform/mattermost/formatter.go` (tests first)
+- [x] Translate `src/mattermost/api.ts` → `internal/platform/mattermost/api.go` (tests first — implemented in client.go)
+- [x] Translate `src/platform/mattermost/client.ts` → `internal/platform/mattermost/client.go` (tests first)
+- [x] WebSocket reconnection logic
+- [x] File upload/download
+- [x] All Mattermost tests GREEN
 
 ---
 
@@ -84,7 +84,7 @@ Convert claude-threads from TypeScript/Bun to Go. The Go binary lives in `go/` a
 - [ ] Translate `src/platform/slack/permission-api.ts` → `internal/platform/slack/permissionapi.go` (tests first)
 - [ ] Translate `src/platform/slack/client.ts` → `internal/platform/slack/client.go` (tests first)
 - [ ] Socket Mode connection + reconnection
-- [ ] File upload/download
+- [x] File upload/download
 - [ ] All Slack tests GREEN
 
 ---

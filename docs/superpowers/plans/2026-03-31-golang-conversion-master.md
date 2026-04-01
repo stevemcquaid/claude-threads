@@ -23,7 +23,7 @@ Each phase has its own detailed plan file. Start the next phase only after the p
 | 0 | [phase-00-module-init.md](./2026-03-31-golang-phase-00-module-init.md) | ✅ | Go module init, go.mod, directory scaffold |
 | 1 | [phase-01-foundation.md](./2026-03-31-golang-phase-01-foundation.md) | ✅ | `utils/`, `config/` — no external deps |
 | 2 | [phase-02-platform-types.md](./2026-03-31-golang-phase-02-platform-types.md) | ✅ | Platform interfaces + normalized types |
-| 3 | [phase-03-mattermost.md](./2026-03-31-golang-phase-03-mattermost.md) | ⬜ | Mattermost WebSocket + REST client |
+| 3 | [phase-03-mattermost.md](./2026-03-31-golang-phase-03-mattermost.md) | ✅ | Mattermost WebSocket + REST client |
 | 4 | [phase-04-slack.md](./2026-03-31-golang-phase-04-slack.md) | ⬜ | Slack Socket Mode + Web API client |
 | 5 | [phase-05-persistence.md](./2026-03-31-golang-phase-05-persistence.md) | ⬜ | sessions.json, thread logger |
 | 6 | [phase-06-claude-cli.md](./2026-03-31-golang-phase-06-claude-cli.md) | ⬜ | Claude CLI subprocess management |
@@ -47,3 +47,4 @@ Each phase has its own detailed plan file. Start the next phase only after the p
 | 2026-03-31 | Master plan created with 16 phases | Initial Go rewrite planning |
 | 2026-04-01 | Phases 0 and 1 marked complete | All foundation tests GREEN, go vet clean |
 | 2026-04-01 | Phase 2 marked complete | Platform types, interfaces, utils (39 tests GREEN), MockPlatformClient |
+| 2026-04-01 | Phase 3 marked complete | MattermostClient, BasePlatformClient, MattermostFormatter, all tests GREEN |
