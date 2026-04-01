@@ -1,4 +1,4 @@
-.PHONY: build test lint integration clean vet
+.PHONY: build test test-short lint integration clean vet
 
 build:
 	go build -o bin/claude-threads ./cmd/claude-threads
