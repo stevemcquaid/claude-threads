@@ -45,17 +45,17 @@ Convert claude-threads from TypeScript/Bun to Go. The Go binary lives in `go/` a
 
 ---
 
-## Phase 2: Platform Types & Interfaces
+## Phase 2: Platform Types & Interfaces ✅ COMPLETE
 
 **Goal:** Define the platform abstraction layer — interfaces and normalized types only, no implementations.
 
 ### Tasks
-- [ ] Translate `src/platform/types.ts` → `internal/platform/types.go`
-- [ ] Translate `src/platform/client.ts` → `internal/platform/client.go` (interface)
-- [ ] Translate `src/platform/formatter.ts` → `internal/platform/formatter.go` (interface)
-- [ ] Translate `src/platform/permission-api.ts` → `internal/platform/permissionapi.go` (interface)
-- [ ] Translate `src/platform/utils.ts` → `internal/platform/utils.go` (tests first)
-- [ ] Write mock implementations of PlatformClient for use in tests
+- [x] Translate `src/platform/types.ts` → `internal/platform/types.go`
+- [x] Translate `src/platform/client.ts` → `internal/platform/client.go` (interface)
+- [x] Translate `src/platform/formatter.ts` → `internal/platform/formatter.go` (interface)
+- [x] Translate `src/platform/permission-api.ts` → `internal/platform/permissionapi.go` (interface)
+- [x] Translate `src/platform/utils.ts` → `internal/platform/utils.go` (tests first)
+- [x] Write mock implementations of PlatformClient for use in tests
 
 ---
 
