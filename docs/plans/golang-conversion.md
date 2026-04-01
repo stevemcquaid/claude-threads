@@ -309,7 +309,7 @@ Convert claude-threads from TypeScript/Bun to Go. The Go binary lives in `go/` a
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| 1: Foundation | ⬜ Not started | |
+| 1: Foundation | ✅ Complete | All utils + config packages, all tests GREEN, go vet clean |
 | 2: Platform Types | ⬜ Not started | |
 | 3: Mattermost | ⬜ Not started | |
 | 4: Slack | ⬜ Not started | |
@@ -333,3 +333,4 @@ Convert claude-threads from TypeScript/Bun to Go. The Go binary lives in `go/` a
 | Date | Change | Reason |
 |------|--------|--------|
 | 2026-03-31 | Initial plan created | Go rewrite project start |
+| 2026-04-01 | Phase 1 complete | All utils + config tests passing, go vet clean |
