@@ -25,7 +25,7 @@ Each phase has its own detailed plan file. Start the next phase only after the p
 | 2 | [phase-02-platform-types.md](./2026-03-31-golang-phase-02-platform-types.md) | ✅ | Platform interfaces + normalized types |
 | 3 | [phase-03-mattermost.md](./2026-03-31-golang-phase-03-mattermost.md) | ✅ | Mattermost WebSocket + REST client |
 | 4 | [phase-04-slack.md](./2026-03-31-golang-phase-04-slack.md) | ✅ | Slack Socket Mode + Web API client |
-| 5 | [phase-05-persistence.md](./2026-03-31-golang-phase-05-persistence.md) | ⬜ | sessions.json, thread logger |
+| 5 | [phase-05-persistence.md](./2026-03-31-golang-phase-05-persistence.md) | ✅ | sessions.json, thread logger |
 | 6 | [phase-06-claude-cli.md](./2026-03-31-golang-phase-06-claude-cli.md) | ⬜ | Claude CLI subprocess management |
 | 7 | [phase-07-mcp.md](./2026-03-31-golang-phase-07-mcp.md) | ⬜ | MCP permission server |
 | 8 | [phase-08-git.md](./2026-03-31-golang-phase-08-git.md) | ⬜ | Git worktree management |
